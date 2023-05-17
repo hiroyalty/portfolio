@@ -1,7 +1,7 @@
 const Nav = () => {
   return (
     <nav>
-      <p>Hello, I am Nav</p>
+      <p></p>
     </nav>
   )
 }
