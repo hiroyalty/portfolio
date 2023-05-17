@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
+    console.log("test git")
     const use = async () => {
       (await import('tw-elements')).default;
     };
