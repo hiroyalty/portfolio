@@ -1,7 +1,7 @@
 'use client'
 
-import React from "react";
-import ArrowIcon from "../../Icons/ArrowIcon";
+//import React from "react";
+
 export default function Contact() {
   return (
     <div
@@ -12,7 +12,7 @@ export default function Contact() {
       </div>
       <span className="text-3xl font-bold tracking-wider text-gray-500 sm:text-4xl opacity-85">Contact</span>
       <p className="flex font-Header tracking-wider text-gray-600 text-center px-6 sm:px-16 md:px-0 md:w-[600px]">
-        I&apos;m always open to new opportunities and collaborations. Whether you have a question, a project idea, or just want to connect, feel free to reach out. I&apos;ll do my best to respond promptly!"
+        I&apos;m always open to new opportunities and collaborations. Whether you have a question, a project idea, or just want to connect, feel free to reach out. I&apos;ll do my best to respond promptly!
       </p>
       <div className="pt-4">
         <a href="mailto:gbohlahgah@gmail.com" target={"_blank"} rel="noreferrer">
