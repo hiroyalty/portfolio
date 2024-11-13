@@ -31,7 +31,6 @@ const MobileMenu = props => {
             onClick={() => closeMenu()}
             className="flex flex-col space-y-2 text-center"
           >
-            <span className="font-mono text-xs text-secondary">01.</span>
             <span
               className="text-sm text-gray-700 duration-300 font-Text2 sm:text-base hover:text-secondary hover:cursor-pointer"
             >
@@ -39,7 +38,7 @@ const MobileMenu = props => {
             </span>
           </Link>
           <Link
-            to="WhereIhaveWorkedSection"
+            to="projectSection"
             spy={true}
             smooth={true}
             offset={-250}
@@ -47,15 +46,14 @@ const MobileMenu = props => {
             onClick={() => closeMenu()}
             className="flex flex-col space-y-2 text-center"
           >
-            <span className="font-mono text-xs text-secondary hover:cursor-pointer">02.</span>
             <span
               className="text-sm text-gray-700 duration-300 font-Text2 sm:text-base hover:text-secondary hover:cursor-pointer"
             >
-              Experience
+              Projects
             </span>
           </Link>
           <Link
-            to="ProjectSection"
+            to="publicationSection"
             spy={true}
             smooth={true}
             offset={100}
@@ -63,15 +61,14 @@ const MobileMenu = props => {
             onClick={() => closeMenu()}
             className="flex flex-col space-y-2 text-center"
           >
-            <span className="font-mono text-xs text-secondary">03.</span>
             <span
               className="text-sm text-gray-700 duration-300 font-Text2 sm:text-base hover:text-secondary hover:cursor-pointer"
             >
-              Work
+              Publications
             </span>
           </Link>
           <Link
-            to="GetInTouchSection"
+            to="contactSection"
             spy={true}
             smooth={true}
             offset={100}
@@ -79,7 +76,6 @@ const MobileMenu = props => {
             onClick={() => closeMenu()}
             className="flex flex-col space-y-2 text-center"
           >
-            <span className="font-mono text-xs text-secondary">04.</span>
             <span
               className="text-sm text-gray-700 duration-300 font-Text2 sm:text-base hover:text-secondary hover:cursor-pointer"
             >
