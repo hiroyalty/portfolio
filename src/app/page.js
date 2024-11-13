@@ -1,101 +1,74 @@
+'use client'
 import Image from "next/image";
+import Head from "next/head";
+import { useContext, useState, useEffect, useRef } from "react";
+import Header from "@/components/Header/Header";
+import Startup from "@/components/Header/StartupLogo/Startup";
+import Introduction from "@/components/Home/Introduction/Introduction";
+import About from "@/components/Home/About/About";
+import Project from "@/components/Home/Projects/Project";
+import Contact from "@/components/Home/Contact/Contact";
+import Footer from "@/components/Footer/Footer";
+import AppContext from "@/components/AppContextFolder/AppContext";
+import Publications from "@/components/Home/Publications/Publications";
+import SideSocialLinks from "@/components/Home/SideSocialLinks/SideSocialLinks";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  
+  const [ShowElement, setShowElement] = useState(false);
+  const context = useContext(AppContext);
+  const aboutRef = useRef(null);
+  const homeRef = useRef(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  useEffect(() => {
+    setTimeout(() => {
+      setShowElement(true);
+    }, 500);
+
+    setTimeout(() => {
+      setShowElement(false);
+      context.sharedState.finishedLoading = true;
+      context.setSharedState(context.sharedState);
+    }, 1000);
+  }, [context]);
+
+  const meta = {
+    title: "Gbolaga Famodun - Software Engineer",
+    description: `I've been working on Software development for over 8 years. Get in touch to know more.`,
+    image: "/img/circle.png",
+    type: "website",
+  };
+
+  return (
+    <>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta content={meta.description} name="description" />
+        <meta property="og:url" content={`https://gbolaga.com`} />
+        <link rel="canonical" href={`https://gbolaga.com`} />
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:site_name" content="Manu Arora" />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:image" content={meta.image} />
+      </Head>
+
+      <div className="relative w-full min-h-screen snap-mandatory bg-primary ">
+          {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>}
+          <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} />
+          <Introduction finishedLoading={context.sharedState.finishedLoading} />
+          <SideSocialLinks finishedLoading={context.sharedState.finishedLoading} />
+          {context.sharedState.finishedLoading ? <About ref={aboutRef} /> : <></>}
+          {context.sharedState.finishedLoading ? <Project /> : <></>}
+          {context.sharedState.finishedLoading ? <Publications /> : <></>}
+          {context.sharedState.finishedLoading ? <Contact /> : <></>}
+          {context.sharedState.finishedLoading ? (
+            <Footer githubUrl={"https://github.com/hiroyalty"} hideSocialsInDesktop={true} />
+          ) : (
+            <></>
+          )}
+          </div>
+          </>
   );
 }
