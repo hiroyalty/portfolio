@@ -31,7 +31,7 @@ export default function Footer({ githubUrl, hideSocialsInDesktop}) {
           className="flex flex-col items-center justify-center space-y-2 font-mono text-sm text-gray-400 group "
         >
           <span className="text-xs group-hover:text-secondary sm:text-sm">
-            Built by Michael Famodun
+            Built by Famodun
           </span>
 
           <span className="flex flex-row items-center space-x-2 text-xs group-hover:text-secondary">

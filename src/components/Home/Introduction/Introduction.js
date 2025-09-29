@@ -30,7 +30,7 @@ export default function Introduction({finishedLoading}) {
         }}
         className="mt-4 text-3xl font-bold lg:text-7xl sm:text-5xl md:text-6xl text-secondary"
       >
-        Michael Famodun.
+        Famodun.
       </motion.h1>
       <motion.h2
         initial={{ y: 10, opacity: 0 }}

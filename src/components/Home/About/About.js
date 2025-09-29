@@ -78,7 +78,7 @@ export default function About(props) {
             <div className="absolute w-5/6 overflow-hidden rounded h-5/6">
               <div className="absolute w-full h-full overflow-hidden duration-300 rounded group-hover:opacity-0 bg-secondary opacity-10"></div>
               <Img
-                src={"/img/circle.png"}
+                src={"/img/circle2.jpg"}
                 className={"object-contain rounded-lg"}
                 alt="My Image Not Found"
               />
