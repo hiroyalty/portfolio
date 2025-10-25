@@ -28,7 +28,7 @@ export default function About(props) {
           <div className="w-full space-y-4 text-sm md:w-7/12 sm:text-base ">
             <div className="font-Header ">
               <span className="text-gray-500">
-              Hi! I’m Michael, a dedicated Full Stack Software Engineer with a strong foundation in building and scaling enterprise-level applications. My journey in software development is driven by a deep passion for transforming complex ideas into high-performing digital solutions. With a robust background in languages like <span className="text-secondary">Java, Python, and JavaScript</span> I craft responsive, efficient applications designed to meet modern demands.
+              Hi! I’m Famodun, a dedicated Full Stack Software Engineer with a strong foundation in building and scaling enterprise-level applications. My journey in software development is driven by a deep passion for transforming complex ideas into high-performing digital solutions. With a robust background in languages like <span className="text-secondary">Java, TypeScript, and JavaScript</span> I craft responsive, efficient applications designed to meet modern demands.
               </span>
             </div>
             <div className="font-Header ">
@@ -78,7 +78,7 @@ export default function About(props) {
             <div className="absolute w-5/6 overflow-hidden rounded h-5/6">
               <div className="absolute w-full h-full overflow-hidden duration-300 rounded group-hover:opacity-0 bg-secondary opacity-10"></div>
               <Img
-                src={"/img/circle2.jpg"}
+                src={"/img/photosme.jpg"}
                 className={"object-contain rounded-lg"}
                 alt="My Image Not Found"
               />

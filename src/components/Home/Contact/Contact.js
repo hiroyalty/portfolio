@@ -15,7 +15,7 @@ export default function Contact() {
         I&apos;m always open to new opportunities and collaborations. Whether you have a question, a project idea, or just want to connect, feel free to reach out. I&apos;ll do my best to respond promptly!
       </p>
       <div className="pt-4">
-        <a href="mailto:gbohlahgah@gmail.com" target={"_blank"} rel="noreferrer">
+        <a href="mailto:mike006.cloud@gmail.com" target={"_blank"} rel="noreferrer">
           <button
             className="font-mono text-sm text-secondary border-secondary 
                             px-8 py-4 border-[1.5px] rounded "
